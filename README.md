@@ -1,0 +1,2 @@
+# Introduction 
+terraformを使ってAzureの環境を構築するためのサンプルコードです。
