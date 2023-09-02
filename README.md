@@ -1,2 +1,6 @@
 # Introduction 
 terraformを使ってAzureの環境を構築するためのサンプルコードです。
+
+# このブランチについて
+このブランチは、terraformのコードを使ってVMとBastionを構築するためのサンプルです。Bastionでの接続には、IDとパスワードを使います。
+実際にterraformで環境を構築する場合はsetup-template.shを確認して下さい。
