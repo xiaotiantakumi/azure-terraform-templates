@@ -1,0 +1,4 @@
+terraform/.terraform.lock.hcl
+terraform/.terraform/*
+terraform/main.tfplan
+terraform/setup.sh
