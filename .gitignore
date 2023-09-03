@@ -2,3 +2,6 @@ terraform/.terraform.lock.hcl
 terraform/.terraform/*
 terraform/main.tfplan
 terraform/setup.sh
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+.terraform.tfstate.lock.info
