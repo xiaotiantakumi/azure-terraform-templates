@@ -8,11 +8,6 @@ variable "address_space_default_private" {
   type        = string
 }
 
-variable "bastion_address_space" {
-  description = "The address space for the bastion subnet"
-  type        = string
-}
-
 variable "dns_server" {
   description = "List of IP addresses of DNS servers"
   type        = string

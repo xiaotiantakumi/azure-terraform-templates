@@ -51,16 +51,6 @@ variable "nic_configuration_name" {
   type        = string
 }
 
-variable "nic_bastion_name" {
-  description = "The name for the nic"
-  type        = string
-}
-
-variable "nic_bastion_configuration_name" {
-  description = "The name for the nic configuration"
-  type        = string
-}
-
 variable "vm_name" {
   description = "The name for the vm"
   type        = string
@@ -73,21 +63,6 @@ variable "vm_size" {
 
 variable "private_ip_address_allocation" {
   description = "The private ip address allocation"
-  type        = string
-}
-
-variable "bastion_public_ip_name" {
-  description = "The name for the bastion public ip"
-  type        = string
-}
-
-variable "bastion_public_ip_allocation_method" {
-  description = "The public ip allocation method"
-  type        = string
-}
-
-variable "bastion_public_ip_sku" {
-  description = "The sku for the bastion public ip"
   type        = string
 }
 
@@ -146,22 +121,7 @@ variable "vm_admin_password" {
   type        = string
 }
 
-variable "bastion_name" {
-  description = "The name for the bastion"
-  type        = string
-}
-
-variable "bastion_ip_configuration_name" {
-  description = "The name for the bastion ip configuration"
-  type        = string
-}
-
 variable "default_private_subnet_id" {
   description = "The id for the default private subnet"
-  type        = string
-}
-
-variable "bastion_subnet_id" {
-  description = "The id for the bastion subnet"
   type        = string
 }
