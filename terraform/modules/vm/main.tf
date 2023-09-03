@@ -15,15 +15,6 @@ resource "azurerm_network_interface" "azure_vm_nic" {
   }
 }
 
-# Public IP for Bastion
-resource "azurerm_public_ip" "bastion_public_ip" {
-  name                = var.bastion_public_ip_name
-  resource_group_name = var.resource_group_name
-  location            = var.location
-  allocation_method   = var.bastion_public_ip_allocation_method
-  sku                 = var.bastion_public_ip_sku
-}
-
 # Create storage account for boot diagnostics
 resource "azurerm_storage_account" "vm_storage_account" {
   name                     = var.vm_storage_account_name
@@ -61,18 +52,4 @@ resource "azurerm_linux_virtual_machine" "vm" {
   admin_username                  = var.vm_admin_username
   disable_password_authentication = var.vm_disable_password_authentication
   admin_password                  = var.vm_admin_password
-}
-
-
-# Azure Bastion
-resource "azurerm_bastion_host" "bastion" {
-  name                = var.bastion_name
-  location            = var.location
-  resource_group_name = var.resource_group_name
-
-  ip_configuration {
-    name                 = var.bastion_ip_configuration_name
-    subnet_id            = var.bastion_subnet_id
-    public_ip_address_id = azurerm_public_ip.bastion_public_ip.id
-  }
 }

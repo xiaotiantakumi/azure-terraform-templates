@@ -27,7 +27,6 @@ variable "vm_admin_password" {
 variable "networking_settings" {
   type = object({
     dns_server                 = string
-    snet_bastion_address_space = string
     snet_private_address_space = string
     vnet_address_space         = string
     tags                       = map(string)

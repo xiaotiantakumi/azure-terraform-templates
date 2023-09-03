@@ -14,11 +14,6 @@ output "snet_id_private" {
   value       = azurerm_subnet.default_private.id
 }
 
-output "snet_id_bastion" {
-  description = "The ID of the Bastion Subnet."
-  value       = azurerm_subnet.bastion_subnet.id
-}
-
 output "snet_name_private" {
   description = "The name of the Private Subnet."
   value       = azurerm_subnet.default_private.name

@@ -67,14 +67,6 @@ resource "azurerm_subnet" "default_private" {
   virtual_network_name = azurerm_virtual_network.vnet.name
 }
 
-# Subnet for the Bastion
-resource "azurerm_subnet" "bastion_subnet" {
-  name                 = "AzureBastionSubnet"
-  resource_group_name  = var.resource_group_name
-  virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefixes     = [var.bastion_address_space]
-}
-
 resource "azurerm_virtual_network" "vnet" {
   address_space       = [var.address_space]
   dns_servers         = [var.dns_server]
