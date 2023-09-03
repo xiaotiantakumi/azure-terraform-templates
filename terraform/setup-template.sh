@@ -13,3 +13,14 @@ terraform apply plan.out
 
 # リソース削除
 # terraform destroy
+
+# リソース作成後、azコマンドでvmのssh接続の設定を実行させる
+# まずは秘密鍵を作成する。-Nでパスフレーズを設定するが、空のパスフレーズなので鍵はパスフレーズなしとなる。
+ssh-keygen -t rsa -b 4096 -C "az vm ssh key" -f ~/.ssh/vm-xiao-dev-001_key -N ""
+
+# 作成した公開鍵を作成したVMに登録する
+az vm user update \
+  --resource-group RG-XIAO-EXAMPLE \
+  --name vm-xiao-dev-001 \
+  --username xiao_test \
+  --ssh-key-value ~/.ssh/vm-xiao-dev-001_key.pub
