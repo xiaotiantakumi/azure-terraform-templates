@@ -1,12 +1,6 @@
-default_region = "japaneast"
-prefix         = "xiao"
-padding        = "001"
-environment    = "dev"
-
-networking_settings = {
-  dns_server                 = "1.1.1.1"
-  snet_private_address_space = "10.2.18.0/26"
-  vnet_address_space         = "10.2.18.0/24"
-
-  tags = {}
-}
+default_region      = "japaneast"
+prefix              = "xiao"
+padding             = "002"
+environment         = "dev"
+resource_group_name = "rg-xiao-dev-002"
+app_insights_name   = "appin-xiao-dev-001"
