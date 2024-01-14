@@ -5,3 +5,4 @@ terraform/setup.sh
 terraform/terraform.tfstate
 terraform/terraform.tfstate.backup
 .terraform.tfstate.lock.info
+*/plan.out
